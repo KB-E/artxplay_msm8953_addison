@@ -1143,4 +1143,9 @@ config MMI_STORAGE_INFO
 	help
 	Provide mechanism to export EMMC/UFS type, size and vendor info.
 
+config STATE_NOTIFIER
+        bool "State Notifier"
+
+source "drivers/soc/qcom/memshare/Kconfig"
+
 endif # ARCH_MSM
