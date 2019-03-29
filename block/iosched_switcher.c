@@ -19,7 +19,7 @@
 #include <linux/fb.h>
 
 #define NOOP_IOSCHED "noop"
-#define RESTORE_DELAY_MS (5000)
+#define RESTORE_DELAY_MS (2000)
 
 struct req_queue_data {
 	struct list_head list;
