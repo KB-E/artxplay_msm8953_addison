@@ -254,7 +254,7 @@ config CPUFREQ_DT
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
-	depends on CPU_FREQ
+	default y
 	help
 	  This driver boosts the frequency of one or more CPUs based on
 	  various events that might occur in the system. As of now, the
