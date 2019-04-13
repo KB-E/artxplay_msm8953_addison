@@ -158,6 +158,8 @@ source "drivers/soc/Kconfig"
 
 source "drivers/devfreq/Kconfig"
 
+source "drivers/hotplug/Kconfig"
+
 source "drivers/extcon/Kconfig"
 
 source "drivers/memory/Kconfig"
