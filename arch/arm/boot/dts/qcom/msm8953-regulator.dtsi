@@ -18,8 +18,8 @@
 		status = "okay";
 		pm8953_s1: regulator-s1 {
 			regulator-min-microvolt = <870000>;
-			regulator-max-microvolt = <1156000>;
-			qcom,init-voltage = <1000000>;
+			regulator-max-microvolt = <1250000>;
+			qcom,init-voltage = <1100000>;
 			status = "okay";
 		};
 	};
