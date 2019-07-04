@@ -884,6 +884,9 @@
 		reg = <0x1800000 0x80000>;
 		reg-names = "cc_base";
 		vdd_gfx-supply = <&gfx_vreg_corner>;
+		clocks = <&clock_gcc clk_xo_clk_src>;
+		clock-names = "xo";
+		qcom,gcc_oxili_gfx3d_clk-opp-handle = <&msm_gpu>;
 		qcom,gfxfreq-corner =
 			<         0   0 >,
 			< 133330000   1 >,  /* Min SVS   */
@@ -894,9 +897,7 @@
 			< 560000000   6 >,  /* Nom Plus  */
 			< 650000000   7 >,  /* Turbo     */
 			< 700000000   8 >,  /* Turbo+    */
-			< 750000000   9 >,  /* Extreme   */
-                        < 800000000   10 >, /* Extreme+  */
-                        < 850000000   11 >; /* Overkill  */
+			< 750000000   9 >;  /* Extreme   */
 		#clock-cells = <1>;
 	};
 
