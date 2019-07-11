@@ -62,19 +62,19 @@ static struct asmp_param_struct {
 	unsigned int cycle_up;
 	unsigned int cycle_down;
 } asmp_param = {
-	.delay = 100,
+	.delay = 10,
 	.scroff_single_core = true,
 	.max_cpus = 8,
-	.min_cpus = 1,
-	.cpufreq_up = 60,
+	.min_cpus = 4,
+	.cpufreq_up = 40,
 	.cpufreq_down = 40,
-	.cycle_up = 2,
+	.cycle_up = 1,
 	.cycle_down = 2,
 };
 
 static unsigned int cycle = 0, delay0 = 0;
 static unsigned long delay_jif = 0;
-static int enabled __read_mostly = 0;
+static int enabled __read_mostly = 1; // Enabled by default
 
 static void __cpuinit asmp_work_fn(struct work_struct *work) {
 	unsigned int cpu = 0, slow_cpu = 0;
