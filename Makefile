@@ -395,7 +395,7 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wno-strict-prototypes -Wno-constant-logical-operand -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
-		   -Wno-format-security -Wmisleading-indentation \
+		   -Wno-format-security \
 		   -std=gnu89 $(CLANG_FLAGS) -w \
 		   -Wno-implicit-function-declaration
 
