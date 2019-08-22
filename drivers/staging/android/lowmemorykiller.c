@@ -61,7 +61,7 @@
 #include "trace/lowmemorykiller.h"
 
 /* to enable lowmemorykiller */
-static int enable_lmk = 0;
+static int enable_lmk = 1;
 module_param_named(enable_lmk, enable_lmk, int,
 	S_IRUGO | S_IWUSR);
 
