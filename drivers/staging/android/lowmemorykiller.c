@@ -51,6 +51,9 @@
 #define CREATE_TRACE_POINTS
 #include <trace/events/almk.h>
 
+// CPU Boost
+#include <linux/cpu_boost.h>
+
 #ifdef CONFIG_HIGHMEM
 #define _ZONE ZONE_HIGHMEM
 #else
@@ -611,6 +614,7 @@ static unsigned long lowmem_scan(struct shrinker *s, struct shrink_control *sc)
 		}
 
 		lowmem_deathpending_timeout = jiffies + HZ;
+                do_input_boost_max();
 		set_tsk_thread_flag(selected, TIF_MEMDIE);
 		send_sig(SIGKILL, selected, 0);
 		rem += selected_tasksize;
